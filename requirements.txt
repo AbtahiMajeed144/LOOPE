@@ -1,0 +1,41 @@
+# LOOPE - Learnable Optimal Positional Encoding
+# Requirements for training Vision Transformers with various positional encodings
+
+# Core Deep Learning
+torch>=2.0.0
+torchvision>=0.15.0
+
+# Vision Transformers
+transformers>=4.30.0
+timm>=0.9.0
+
+# Data Augmentation
+albumentations>=1.3.0
+opencv-python>=4.8.0
+
+# Scientific Computing
+numpy>=1.24.0
+pandas>=2.0.0
+
+# Machine Learning Utilities
+scikit-learn>=1.3.0
+scikit-image>=0.21.0
+
+# Image Processing
+Pillow>=10.0.0
+
+# Visualization
+matplotlib>=3.7.0
+
+# Progress Bars
+tqdm>=4.65.0
+
+# Model Info
+torchinfo>=1.8.0
+
+# Jupyter Support (optional, for running notebooks)
+jupyter>=1.0.0
+ipywidgets>=8.0.0
+
+# Scipy (for experiments visualization)
+scipy>=1.11.0
