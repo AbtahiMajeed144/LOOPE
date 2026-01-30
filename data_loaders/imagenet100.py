@@ -43,7 +43,7 @@ class ImageNet100Dataset(Dataset):
             self.images = np.empty((N, IMG_SIZE, IMG_SIZE, 3), dtype=np.uint8)
             
             for i, file in enumerate(files):
-                p = os.path.normpath(file[2])
+                p = file[2].replace('\\', '/')
                 img = cv2.imread(p, cv2.IMREAD_COLOR)
                 if img is None:
                     raise FileNotFoundError(f"Failed to read image: {p}")
@@ -107,7 +107,7 @@ class ImageNet100Dataset(Dataset):
         if self.preload_ram:
             img = self.images[idx]  # uint8 RGB
         else:
-            path = os.path.normpath(self.images[idx])
+            path = self.images[idx].replace('\\', '/')
             img = cv2.imread(path, cv2.IMREAD_COLOR)
             if img is None:
                 raise FileNotFoundError(f"Failed to read image: {path}")
