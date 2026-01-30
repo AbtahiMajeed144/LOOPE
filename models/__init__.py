@@ -3,7 +3,7 @@ LOOPE Models Module
 Vision Transformer variants with different positional encodings.
 """
 from .vit_base import create_vit_base
-from .vit_art import ViTArt
+from .vit_art import ViT_Art
 from .vit_fourier import ViTFourier, FourierPositionalEncoding
 from .vit_sincos2d import ViTSinCos2D, Sin2DPositionalEncoding
 from .cpe_vit import CPEViT, ConditionalPositionalEncoding
@@ -41,7 +41,7 @@ def get_model(model_name, num_classes, encoder_type='sin_cos_1d', img_size=224):
     if model_name == 'vit_b_16':
         return create_vit_base(num_classes, img_size, encoder_type)
     elif model_name == 'vit_art':
-        return ViTArt(num_classes)
+        return ViT_Art(num_classes)
     elif model_name == 'Fourier':
         return ViTFourier(num_classes)
     elif model_name == 'SinCos2D':
