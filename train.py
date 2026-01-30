@@ -60,7 +60,7 @@ def main():
         raise ValueError(f"Unknown dataset: {config.DATASET}")
     
     num_classes = train_dataset.num_cls
-    print(f"DATASET LOADED NAMED: {train_dataset.name} WITH NUM OF CLASS: {num_cla sses}")
+    print(f"DATASET LOADED NAMED: {train_dataset.name} WITH NUM OF CLASS: {num_classes}")
     
     # Create model
     model = get_model(config.MODEL, num_classes, config.ENCODER, config.IMG_SIZE)
