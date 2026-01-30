@@ -17,7 +17,7 @@ XIMG_SIZE = 256
 TVT_SPLIT = (80, 10, 10)    # Train, Validation, Test percentages
 
 # Training Hyperparameters
-BATCH_SIZE = 16                 # Used for train/valid/test loaders and LR scaling
+BATCH_SIZE = 128                 # Used for train/valid/test loaders and LR scaling
 BATCH_SIZE_TRAIN = BATCH_SIZE   # Alias for compatibility
 BATCH_SIZE_VALID = BATCH_SIZE   # Alias for compatibility
 EPOCHS = 500
@@ -31,7 +31,7 @@ MIN_LR = 0.0001 / 20
 OPTIM = 'adam'
 
 # Gradient Accumulation
-GRAD_ACCUM_STEPS = 16
+GRAD_ACCUM_STEPS = 8
 
 # Device
 DEVICE = 'cuda'  # 'gpu' or 'cpu'
